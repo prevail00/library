@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <script src="javascript.js" defer></script> <!-- defer makes the script wait until DOM is ready -->
+    <title>My Library</title>
+</head>
+<body>
+	<h1>My Library</h1>
+
+	<!-- New Book Button -->
+	<button id="newBookBtn">+ New Book</button>
+
+	<!-- Book Table -->
+	<table id="libraryTable">
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Author</th>
+				<th>Pages</th>
+				<th>Read</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- Populated by JS -->
+		</tbody>
+	</table>
+
+	<!-- Dialog for adding a new book -->
+	<dialog id="bookDialog">
+		<form id="bookForm" method="dialog">
+			<h2>Add New Book</h2>
+
+			<label>
+				Title:
+				<input type="text" name="title" required>
+			</label><br><br>
+
+			<label>
+				Author:
+				<input type="text" name="author" required>
+			</label><br><br>
+
+			<label>
+				Pages:
+				<input type="number" name="pages" min="1" required>
+			</label><br><br>
+
+			<label>
+				Read:
+				<input type="checkbox" name="hasRead">
+			</label><br><br>
+
+			<button type="submit">Add Book</button>
+			<button type="button" id="cancelDialog">Cancel</button>
+		</form>
+	</dialog>
+</body>
+</html>
