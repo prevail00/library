@@ -42,6 +42,8 @@ function renderLibraryTable() {
     row.appendChild(authorCell);
     row.appendChild(pagesCell);
     row.appendChild(readCell);
+
+    tableBody.appendChild(row);
   });
 }
 
